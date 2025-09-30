@@ -5,13 +5,31 @@ void setup() {
   background(50); // a dark gray background
 
   // Your high-level code goes here
-  Turtle t = new Turtle(this);
+  t = new Turtle(this);
 
   // End your high-level code here
-
+  
   // This shows where the Turtle ends up
   t.render();
 }
 
 // Your methods can be defined down here
+
+int defultSideLength = 100;
+
+void letterO(float scaler){
+   int sideOfO = (int)(defultSideLength * scaler);
   
+   t.forward(sideOfO / 2);
+   t.right(90);
+   t.forward(sideOfO);
+   t.right(90);
+   t.forward(sideOfO / 2);
+   t.right(90);
+   t.forward(sideOfO);
+   t.right(90);
+   t.forward(sideOfO/2);
+   t.right(90);
+   t.forward(sideOfO);
+   t.left(90);
+}
