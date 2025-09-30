@@ -17,6 +17,7 @@ void setup() {
 
 int defultSideLength = 100;
 
+
 void letterO(float scaler){
    int sideOfO = (int)(defultSideLength * scaler);
   
@@ -89,6 +90,24 @@ void letterG(float scaler){
    t.right(90);
    t.forward(sideG / 2);
    t.left(90);
+}
+
+void letterS(float scaler){
+  int sideS = (int)(defultSideLength * scaler);  
+  
+  t.forward(sideS / 2);
+  t.right(180);
+  t.forward(sideS / 2);
+  t.left(90);
+  t.forward(sideS / 2);
+  t.left(90);
+  t.forward(sideS / 2);
+  t.right(90);
+  t.forward(sideS / 2);
+  t.right(90);
+  t.forward(sideS / 2);
+  t.right(180);
+  t.forward(sideS / 2);
 }
 
 void letterL(float scaler){
