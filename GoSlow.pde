@@ -90,3 +90,35 @@ void letterG(float scaler){
    t.forward(sideG / 2);
    t.left(90);
 }
+
+void letterL(float scaler){
+  int sideL = (int)(defultSideLength * scaler);
+  
+  
+  t.right(90);
+  t.forward(sideL);
+  t.left(90);
+  t.forward(sideL / 2);
+}
+
+
+void letterSpacing(float scaler){
+  int nextSide = (int)(defultSideLength * scaler);
+  
+   t.penUp();
+   t.forward(defultSideLength / 2);
+   t.left(90);
+   t.forward(nextSide);
+   t.right(90);
+   t.penDown();
+}
+
+void nextLine(){
+  t.penUp();
+  t.right(90);
+  t.forward(defultSideLength / 2);
+  t.right(90);
+  t.forward(2 * defultSideLength);
+  t.right(180);
+  t.penDown();
+}
