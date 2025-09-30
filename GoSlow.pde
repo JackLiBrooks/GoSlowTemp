@@ -33,3 +33,20 @@ void letterO(float scaler){
    t.forward(sideOfO);
    t.left(90);
 }
+
+void smallLetterO(float scaler){
+   int sideOfO = (int)(defultSideLength * 0.5 * scaler);
+  
+   t.forward(sideOfO / 2);
+   t.right(90);
+   t.forward(sideOfO);
+   t.right(90);
+   t.forward(sideOfO / 2);
+   t.right(90);
+   t.forward(sideOfO);
+   t.right(90);
+   t.forward(sideOfO/2);
+   t.right(90);
+   t.forward(sideOfO);
+   t.left(90);
+}
