@@ -50,3 +50,21 @@ void smallLetterO(float scaler){
    t.forward(sideOfO);
    t.left(90);
 }
+
+void letterW(float scaler){
+  int sideW = (int)((int)(Math.sqrt(Math.pow(defultSideLength, 2) + Math.pow(defultSideLength / 2, 2))) * scaler);
+  
+  t.right(67);
+  t.forward(sideW);
+  t.left(135);
+  t.forward(sideW / 2);
+  t.right(135);
+  t.forward(sideW / 2);
+  t.left(135);
+  t.forward(sideW);
+  t.right(157);
+  t.penUp();
+  t.forward(defultSideLength);
+  t.left(90);
+  
+}
