@@ -5,38 +5,49 @@ void setup() {
   background(50); // a dark gray background
 
   // Your high-level code goes here
-  t = new Turtle(this);
+  t = new Turtle(this, 50, 50);
 
   // End your high-level code here
-  
+  goSlow(50);
   // This shows where the Turtle ends up
   t.render();
 }
 
 // Your methods can be defined down here
 
-int defultSideLength = 100;
 
-
-void letterO(float scaler){
-   int sideOfO = (int)(defultSideLength * scaler);
+void goSlow(float scaler){
+  letterG(scaler);
+  letterSpacing(scaler);
+  letterO(scaler);
+  nextLine(scaler);
+  letterS(scaler);
+  letterSpacing(scaler);
+  letterL(scaler);
+  letterSpacing(scaler);
+  smallLetterO(scaler);
+  letterSpacing(scaler / 2);
+  letterW(scaler);
   
-   t.forward(sideOfO / 2);
+}
+void letterO(float scaler){
+  
+   t.forward(scaler / 2);
    t.right(90);
-   t.forward(sideOfO);
+   t.forward(scaler);
    t.right(90);
-   t.forward(sideOfO / 2);
+   t.forward(scaler / 2);
    t.right(90);
-   t.forward(sideOfO);
+   t.forward(scaler);
    t.right(90);
-   t.forward(sideOfO/2);
+   t.forward(scaler/2);
    t.right(90);
-   t.forward(sideOfO);
+   t.forward(scaler);
    t.left(90);
 }
 
 void smallLetterO(float scaler){
-   int sideOfO = (int)(defultSideLength * 0.5 * scaler);
+   int sideOfO = (int)(0.5 * scaler);
   
    t.forward(sideOfO / 2);
    t.right(90);
@@ -53,7 +64,10 @@ void smallLetterO(float scaler){
 }
 
 void letterW(float scaler){
-  int sideW = (int)((int)(Math.sqrt(Math.pow(defultSideLength, 2) + Math.pow(defultSideLength / 2, 2))) * scaler);
+  t.penUp();
+  t.forward(scaler / 4);
+  t.penDown();
+  int sideW = (int)((int)(Math.sqrt(Math.pow(1, 2) + Math.pow(1 / 2, 2))) * scaler);
   
   t.right(67);
   t.forward(sideW);
@@ -65,79 +79,75 @@ void letterW(float scaler){
   t.forward(sideW);
   t.right(157);
   t.penUp();
-  t.forward(defultSideLength);
+  t.forward(1);
   t.left(90);
   
 }
 
 
 void letterG(float scaler){
-   int sideG = (int)(defultSideLength * scaler);  
-  
-   t.forward(sideG);
+
+   t.forward(scaler);
    t.left(180);
-   t.forward(sideG);
+   t.forward(scaler);
    t.left(90);
-   t.forward(sideG);
+   t.forward(scaler);
    t.left(90);
-   t.forward(sideG);
+   t.forward(scaler);
    t.left(90);
-   t.forward(sideG / 2);
+   t.forward(scaler / 2);
    t.left(90);
-   t.forward(sideG / 2);
+   t.forward(scaler / 2);
    t.right(180);
-   t.forward(sideG / 2);
+   t.forward(scaler / 2);
    t.right(90);
-   t.forward(sideG / 2);
+   t.forward(scaler / 2);
    t.left(90);
 }
 
-void letterS(float scaler){
-  int sideS = (int)(defultSideLength * scaler);  
+void letterS(float scaler){ 
   
-  t.forward(sideS / 2);
+  t.forward(scaler / 2);
   t.right(180);
-  t.forward(sideS / 2);
+  t.forward(scaler / 2);
   t.left(90);
-  t.forward(sideS / 2);
+  t.forward(scaler / 2);
   t.left(90);
-  t.forward(sideS / 2);
+  t.forward(scaler / 2);
   t.right(90);
-  t.forward(sideS / 2);
+  t.forward(scaler / 2);
   t.right(90);
-  t.forward(sideS / 2);
+  t.forward(scaler / 2);
   t.right(180);
-  t.forward(sideS / 2);
+  t.forward(scaler / 2);
 }
 
 void letterL(float scaler){
-  int sideL = (int)(defultSideLength * scaler);
   
   
   t.right(90);
-  t.forward(sideL);
+  t.forward(scaler);
   t.left(90);
-  t.forward(sideL / 2);
+  t.forward(scaler / 2);
 }
 
 
 void letterSpacing(float scaler){
-  int nextSide = (int)(defultSideLength * scaler);
   
    t.penUp();
-   t.forward(defultSideLength / 2);
+   t.forward(scaler / 2);
    t.left(90);
-   t.forward(nextSide);
+   t.forward(scaler);
    t.right(90);
    t.penDown();
 }
 
-void nextLine(){
+void nextLine(float scaler){
   t.penUp();
   t.right(90);
-  t.forward(defultSideLength / 2);
+  t.forward(scaler / 2);
   t.right(90);
-  t.forward(2 * defultSideLength);
+  t.forward(2 * scaler);
   t.right(180);
   t.penDown();
 }
