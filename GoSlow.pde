@@ -68,3 +68,25 @@ void letterW(float scaler){
   t.left(90);
   
 }
+
+
+void letterG(float scaler){
+   int sideG = (int)(defultSideLength * scaler);  
+  
+   t.forward(sideG);
+   t.left(180);
+   t.forward(sideG);
+   t.left(90);
+   t.forward(sideG);
+   t.left(90);
+   t.forward(sideG);
+   t.left(90);
+   t.forward(sideG / 2);
+   t.left(90);
+   t.forward(sideG / 2);
+   t.right(180);
+   t.forward(sideG / 2);
+   t.right(90);
+   t.forward(sideG / 2);
+   t.left(90);
+}
